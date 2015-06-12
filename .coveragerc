@@ -1,0 +1,6 @@
+[run]
+include =
+    toolbox/*
+
+omit =
+    toolbox/tests.py

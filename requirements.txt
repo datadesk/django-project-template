@@ -1,0 +1,17 @@
+Django
+Fabric
+argparse
+boto
+coverage
+django-debug-toolbar
+greeking
+pep8
+psycopg2
+pycrypto
+pyflakes
+pyinotify
+python-coveralls
+python-memcached
+pytz
+six
+sqlparse
