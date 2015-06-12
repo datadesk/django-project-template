@@ -1,11 +1,11 @@
-<pre><code>     _  _                                    _        _     _                  _      _       
-  __| |(_)__ _ _ _  __ _ ___   _ __ _ _ ___ (_)___ __| |_  | |_ ___ _ __  _ __| |__ _| |_ ___ 
+<pre><code>     _  _                                    _        _     _                  _      _
+  __| |(_)__ _ _ _  __ _ ___   _ __ _ _ ___ (_)___ __| |_  | |_ ___ _ __  _ __| |__ _| |_ ___
  / _` || / _` | ' \/ _` / _ \ | '_ \ '_/ _ \| / -_) _|  _| |  _/ -_) '  \| '_ \ / _` |  _/ -_)
  \__,_|/ \__,_|_||_\__, \___/ | .__/_| \___// \___\__|\__|  \__\___|_|_|_| .__/_\__,_|\__\___|
-     |__/          |___/      |_|         |__/                           |_|                  
+     |__/          |___/      |_|         |__/                           |_|
 </code></pre>
 
-A custom template for initializing a new Django project the Data Desk way. 
+A custom template for initializing a new Django project the Data Desk way.
 
 Uses the [built-in](https://docs.djangoproject.com/en/dev/ref/django-admin/#startproject-projectname-destination) Django ``startproject`` templating system. Includes a number of small modifications favored by the [Los Angeles Times Data Desk](http://datadesk.latimes.com). Assumes you already have experience hacking around on Django and PostGIS.
 
@@ -14,9 +14,9 @@ Still experimental, so don't get your hopes up.
 [![Build Status](https://travis-ci.org/datadesk/django-project-template.png?branch=master)](https://travis-ci.org/datadesk/django-project-template)
 [![Coverage Status](https://coveralls.io/repos/datadesk/django-project-template/badge.png?branch=master)](https://coveralls.io/r/datadesk/django-project-template?branch=master)
 
-* Issues: [https://github.com/datadesk/django-project-template/issues](https://github.com/datadesk/django-project-template/issues)
-* Testing: [https://travis-ci.org/datadesk/django-project-template](https://travis-ci.org/datadesk/django-project-template)
-* Coverage: [https://coveralls.io/r/datadesk/django-project-template](https://coveralls.io/r/datadesk/django-project-template)
+* Issues: [github.com/datadesk/django-project-template/issues](https://github.com/datadesk/django-project-template/issues)
+* Testing: [travis-ci.org/datadesk/django-project-template](https://travis-ci.org/datadesk/django-project-template)
+* Coverage: [coveralls.io/r/datadesk/django-project-template](https://coveralls.io/r/datadesk/django-project-template)
 
 Features
 --------
@@ -97,7 +97,7 @@ Copy the key. Open the settings file and drop it near the top. While you're ther
 $ vim project/settings.py
 ```
 
-Create a PostGIS database to connect with. This may vary depending on your PostGIS configuration. 
+Create a PostGIS database to connect with. This may vary depending on your PostGIS configuration.
 
 The command below assumes you have it running and want to make the database with a user named ``postgres``. Please modify it to suit your needs. If you don't have PostGIS installed, try following [the GeoDjango installation instructions](https://docs.djangoproject.com/en/dev/ref/contrib/gis/install/#installation).
 
@@ -129,4 +129,4 @@ Fire up the test server.
 $ fab rs
 ```
 
-Get to work. Once you have something worth saving you can replace this README with a description of your new project. 
+Get to work. Once you have something worth saving you can replace this README with a description of your new project.
