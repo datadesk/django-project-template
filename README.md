@@ -63,7 +63,7 @@ $ . bin/activate
 Install Django.
 
 ```bash
-$ pip install django
+$ pip install "django<1.9"
 ```
 
 Create a new Git repository.
