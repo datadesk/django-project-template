@@ -19,9 +19,9 @@ BASE_DIR = os.path.join(
 )
 
 # Email
-ADMINS = (
+ADMINS = [
     ('', ''),
-)
+]
 MANAGERS = ADMINS
 
 EMAIL_HOST_USER = ''

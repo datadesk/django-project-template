@@ -18,9 +18,9 @@ CACHES = {
         #'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
     }
 }
-TEMPLATE_LOADERS = (
+TEMPLATE_LOADERS = [
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-)
+]
 STATIC_URL = '/static/'
 WSGI_APPLICATION = '{{ project_name }}.wsgi_dev.application'
