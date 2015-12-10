@@ -1,7 +1,7 @@
+from django import template
 from __future__ import unicode_literals
-from django.template.base import Library
 from django.template.defaultfilters import stringfilter
-register = Library()
+register = template.Library()
 
 
 @register.filter(is_safe=True)
