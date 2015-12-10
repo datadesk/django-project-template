@@ -41,23 +41,23 @@ USE_TZ = True
 # Media and static files
 MEDIA_ROOT = os.path.join(BASE_DIR, '.media')
 STATIC_ROOT = os.path.join(BASE_DIR, '.static')
-STATICFILES_DIRS = (
+STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'templates', 'static'),
-)
-STATICFILES_FINDERS = (
+]
+STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-)
+]
 
 # Templates
-TEMPLATE_LOADERS = (
+TEMPLATE_LOADERS = [
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-)
-TEMPLATE_DIRS = (
+]
+TEMPLATE_DIRS = [
     os.path.join(BASE_DIR, 'templates'),
-)
-TEMPLATE_CONTEXT_PROCESSORS = (
+]
+TEMPLATE_CONTEXT_PROCESSORS = [
     "django.contrib.auth.context_processors.auth",
     "django.core.context_processors.debug",
     "django.core.context_processors.i18n",
@@ -68,10 +68,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'toolbox.context_processors.env.environment',
     'toolbox.context_processors.sites.current_site',
-)
+]
 
 # Web request stuff
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE_CLASSES = [
     'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.cache.FetchFromCacheMiddleware',
@@ -80,13 +80,13 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-)
+]
 ROOT_URLCONF = '{{ project_name }}.urls'
 USE_X_FORWARDED_HOST = True
 
 
 # Installed apps
-INSTALLED_APPS = (
+INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -99,7 +99,7 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     'toolbox',
     'greeking',
-)
+]
 
 # Logging
 MUNIN_ROOT = '/var/cache/munin/www/'
