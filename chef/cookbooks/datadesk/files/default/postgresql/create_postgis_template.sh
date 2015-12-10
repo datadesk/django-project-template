@@ -1,7 +1,7 @@
 #!/bin/bash
 
 POSTGIS_SQL=postgis.sql
-POSTGIS_SQL_PATH=/usr/share/postgresql/9.4/contrib/postgis-2.1
+POSTGIS_SQL_PATH=/usr/share/postgresql/9.3/contrib/postgis-2.1
 
 createdb -E UTF8 template_postgis && \
 ( createlang -d template_postgis -l | grep plpgsql || createlang -d template_postgis plpgsql ) && \
