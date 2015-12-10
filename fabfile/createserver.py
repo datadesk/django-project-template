@@ -7,7 +7,7 @@ from fabric.api import env, task
 @task
 def createserver(
     region='us-west-2',
-    ami='ami-bd471c8d',
+    ami='ami-86e605b5',
     key_name='datadesk.march.2015',
     instance_type='m3.medium',
     block_gb_size=10,
