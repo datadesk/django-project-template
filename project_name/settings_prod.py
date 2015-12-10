@@ -21,12 +21,12 @@ CACHES = {
         }
     }
 }
-TEMPLATE_LOADERS = (
+TEMPLATE_LOADERS = [
     ('django.template.loaders.cached.Loader', (
         'django.template.loaders.filesystem.Loader',
         'django.template.loaders.app_directories.Loader',
     )),
-)
+]
 STATIC_URL = ''
 WSGI_APPLICATION = '{{ project_name }}.wsgi_prod.application'
 ALLOWED_HOSTS = ()
