@@ -23,8 +23,8 @@ class Command(BaseCommand):
             action="store",
             dest="env",
             default='prod',
-            help="The deployment environment you want pull the database" + \
-            " from. By default it's prod."
+            help=("The deployment environment you want pull the database "
+            " from. By default it's prod.")
         )
 
     def set_options(self, *args, **kwargs):
