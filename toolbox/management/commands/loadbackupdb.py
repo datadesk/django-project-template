@@ -24,7 +24,7 @@ class Command(BaseCommand):
             dest="env",
             default='prod',
             help=("The deployment environment you want pull the database "
-                " from. By default it's prod.")
+                    " from. By default it's prod.")
         )
 
     def set_options(self, *args, **kwargs):

@@ -4,11 +4,11 @@ from django.core.exceptions import SuspiciousOperation
 SECRET_KEY = "RUN fab generatesecret to get a real secret key!"
 
 # Amazon Web Services
-AWS_ACCESS_KEY_ID = '' # The shorter one
-AWS_SECRET_ACCESS_KEY = '' # The longer one
-AWS_BUCKET_NAME = '' # For your static files
-AWS_BACKUP_BUCKET_NAME = '' # For database backups
-AWS_BACKUP_BUCKET_DIRECTORY = '' # A prefix for the database backup key
+AWS_ACCESS_KEY_ID = ''  # The shorter one
+AWS_SECRET_ACCESS_KEY = ''  # The longer one
+AWS_BUCKET_NAME = ''  # For your static files
+AWS_BACKUP_BUCKET_NAME = ''  # For database backups
+AWS_BACKUP_BUCKET_DIRECTORY = ''  # A prefix for the database backup key
 
 # Settings paths that are handy to use other places
 SETTINGS_DIR = os.path.dirname(os.path.realpath(__file__))
@@ -108,12 +108,13 @@ INSTALLED_APPS = [
 # Logging
 MUNIN_ROOT = '/var/cache/munin/www/'
 
+
 def skip_suspicious_operations(record):
-  if record.exc_info:
-    exc_value = record.exc_info[1]
-    if isinstance(exc_value, SuspiciousOperation):
-      return False
-  return True
+    if record.exc_info:
+        exc_value = record.exc_info[1]
+        if isinstance(exc_value, SuspiciousOperation):
+            return False
+    return True
 
 LOGGING = {
     'version': 1,
@@ -134,27 +135,28 @@ LOGGING = {
             'class': 'django.utils.log.AdminEmailHandler'
         },
         'null': {
-            'level':'DEBUG',
-            'class':'logging.NullHandler',
+            'level': 'DEBUG',
+            'class': 'logging.NullHandler',
         },
-        'console':{
-            'level':'DEBUG',
-            'class':'logging.StreamHandler',
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
             'formatter': 'verbose'
         },
         'logfile': {
-            'level':'DEBUG',
-            'class':'logging.handlers.RotatingFileHandler',
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
             'filename': os.path.join(BASE_DIR, 'django.log'),
-            'maxBytes': 1024*1024*5, # 5MB,
+            'maxBytes': 1024*1024*5,  # 5MB,
             'backupCount': 0,
             'formatter': 'verbose',
         },
     },
     'formatters': {
         'verbose': {
-            'format': '%(levelname)s|%(asctime)s|%(module)s|%(process)d|%(thread)d|%(message)s',
-            'datefmt' : "%d/%b/%Y %H:%M:%S"
+            'format': ('%(levelname)s|%(asctime)s|%(module)s'
+                       '|%(process)d|%(thread)d|%(message)s')
+            'datefmt': "%d/%b/%Y %H:%M:%S"
         },
         'simple': {
             'format': '%(levelname)s|%(message)s'
