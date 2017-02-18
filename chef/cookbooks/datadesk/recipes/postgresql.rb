@@ -12,31 +12,14 @@ package "libproj-dev" do
     :upgrade
 end
 
-package "postgresql-9.3-postgis-2.1" do
+package "postgresql-9.5-postgis-2.2" do
     :upgrade
 end
 
-package "postgresql-server-dev-9.3" do
+package "postgresql-server-dev-9.5" do
     :upgrade
 end
 
 package "python-psycopg2" do
     :upgrade
-end
-
-cookbook_file "/tmp/create_postgis_template.sh" do
-  source "postgresql/create_postgis_template.sh"
-  mode 0640
-  owner "postgres"
-  group "postgres"
-end
-
-script "create-postgis-template" do
-  interpreter "bash"
-  user "postgres"
-  cwd "/tmp"
-  code <<-EOH
-  source ./create_postgis_template.sh
-  EOH
-  ignore_failure true
 end

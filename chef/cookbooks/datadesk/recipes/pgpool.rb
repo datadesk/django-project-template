@@ -9,7 +9,7 @@ cookbook_file "/etc/pgpool2/pgpool.conf" do
   mode 0640
 end
 
-cookbook_file "/etc/postgresql/9.3/main/pg_hba.conf" do
+cookbook_file "/etc/postgresql/9.5/main/pg_hba.conf" do
   source "pgpool/pg_hba.conf"
   user "postgres"
   group "postgres"
