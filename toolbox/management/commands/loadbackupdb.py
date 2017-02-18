@@ -2,7 +2,6 @@ import os
 import boto
 from datetime import datetime
 from django.conf import settings
-from optparse import make_option
 from django.core.management.base import BaseCommand, CommandError
 
 
@@ -24,8 +23,8 @@ class Command(BaseCommand):
             action="store",
             dest="env",
             default='prod',
-            help="The deployment environment you want pull the database from."+\
-                "By default it's prod."
+            help="The deployment environment you want pull the database" + \
+            " from. By default it's prod."
         )
 
     def set_options(self, *args, **kwargs):
