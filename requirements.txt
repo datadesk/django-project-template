@@ -5,11 +5,10 @@ boto
 coverage
 django-debug-toolbar
 greeking
-pep8
+flake8
 psycopg2
 pycrypto
 pyflakes
-pyinotify
 python-coveralls
 python-memcached
 pytz
