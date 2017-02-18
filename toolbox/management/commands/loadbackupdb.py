@@ -6,30 +6,27 @@ from optparse import make_option
 from django.core.management.base import BaseCommand, CommandError
 
 
-custom_options = (
-    make_option(
-        "--name",
-        action="store",
-        dest="name",
-        default='',
-        help="A custom name for the database we're creating locally"
-    ),
-    make_option(
-        "--env",
-        action="store",
-        dest="env",
-        default='prod',
-        help="The deployment environment you want pull the database from. \
-By default it's prod."
-    ),
-)
-
-
 class Command(BaseCommand):
     args = '<date YYYY-MM-DD>'
-    help = 'Load a database snapshot from our nightly archive. Pulls latest \
-by default. Specify date for an older one.'
-    option_list = BaseCommand.option_list + custom_options
+    help = 'Load a database snapshot from our nightly archive. Pulls latest' \
+        + ' by default. Specify date for an older one.'
+
+    def add_arguments(self, parser):
+        parser.add_argument(
+            "--name",
+            action="store",
+            dest="name",
+            default='',
+            help="A custom name for the database we're creating locally"
+        )
+        parser.add_argument(
+            "--env",
+            action="store",
+            dest="env",
+            default='prod',
+            help="The deployment environment you want pull the database from."+\
+                "By default it's prod."
+        )
 
     def set_options(self, *args, **kwargs):
         # If the user provides a date, try to use that
