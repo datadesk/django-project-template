@@ -7,9 +7,9 @@ from fabric.api import env, task
 @task
 def createserver(
     region='us-west-2',
-    ami='ami-86e605b5',
+    ami='ami-7c803d1c',
     key_name='datadesk.march.2015',
-    instance_type='m3.medium',
+    instance_type='t2.medium',
     block_gb_size=10,
     volume_type='gp2',
     subnet_id='subnet-3e349e49',
